@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/** Hello world compoent description*/
 class HelloWorld extends React.PureComponent {
     render() {
       return (<div>Hello {this.props.message}</div>);
@@ -8,7 +9,12 @@ class HelloWorld extends React.PureComponent {
 }
 
 HelloWorld.propTypes = {
-  message: PropTypes.string,
+  /** Description message a*/
+  message: PropTypes.string, 
+}
+
+HelloWorld.defaultProps = {
+  message: 'World',
 }
 
 export default HelloWorld;
