@@ -1,1 +1,1 @@
-module.exports = []
+module.exports = [{"name":"HelloWorld","description":"","props":{"message":{"type":{"name":"string"},"required":false,"description":""}},"code":"import React from 'react';\nimport PropTypes from 'prop-types';\n\nclass HelloWorld extends React.PureComponent {\n    render() {\n      return (<div>Hello {this.props.message}</div>);\n    }\n}\n\nHelloWorld.propTypes = {\n  message: PropTypes.string,\n}\n\nexport default HelloWorld;\n","examples":[]}]
