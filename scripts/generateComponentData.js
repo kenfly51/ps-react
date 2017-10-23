@@ -27,7 +27,7 @@ function generate(paths) {
         try {
             return getComponentData(paths, componentName);
         } catch (error) {
-            error.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
+            errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
         }
     });
     writeFile(paths.output, 'module.exports = ' + JSON.stringify(errors.length ? errors : componentData));
@@ -62,7 +62,7 @@ function getExampleData(examplesPath, componentName) {
 function getExampleFiles(examplesPath, componentName) {
     var exampleFiles = [];
     try {
-        examplesFile = getFiles(path.join(examplesPath, componentName));
+        exampleFiles = getFiles(path.join(examplesPath, componentName));
     } catch(error) {
         console.log(chalk.red(`No examples found for ${componentName}.`));
     }
@@ -88,5 +88,5 @@ function writeFile(filePath, content) {
 }
 
 function readFile(filePath) {
-    fs.readFileSync(filePath, 'utf-8');
+    return fs.readFileSync(filePath, 'utf-8');
 }
