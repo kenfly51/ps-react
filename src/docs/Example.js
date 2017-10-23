@@ -14,16 +14,30 @@ class Example extends Component {
   }
 
   render() {
+    const { showCode } = this.state;
+    const { code, description, name } = this.props.example;
+    const ExampleComponent = require(`./example/${this.props.componentName}/${name}`).default;
     return (
-      <div>
-        
+      <div className="example">
+        { description && <h4>{description}</h4>}
+
+        <ExampleComponent />
+
+        <p>
+          <a href="#" onClick={this.toggleCode}>
+            { showCode ? 'Hide' : 'Show' } Code
+          </a>
+        </p>
+
+        { showCode && code }
       </div>
     );
   }
 }
 
 Example.propTypes = {
-
+  example: PropTypes.object.isRequired,
+  componentName: PropTypes.string.isRequired
 };
 
 export default Example;
