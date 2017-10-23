@@ -16,7 +16,7 @@ class Example extends Component {
   render() {
     const { showCode } = this.state;
     const { code, description, name } = this.props.example;
-    const ExampleComponent = require(`./example/${this.props.componentName}/${name}`).default;
+    const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default;
     return (
       <div className="example">
         { description && <h4>{description}</h4>}

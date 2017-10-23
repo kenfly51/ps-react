@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const Props = props => {
+const Props = ({props}) => {
   return (
     <table className="props">
       <thead>
