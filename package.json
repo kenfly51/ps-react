@@ -27,6 +27,7 @@
     "highlight.js": "^9.10.0",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "jest-cli": "^21.2.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
@@ -95,6 +96,7 @@
   "devDependencies": {
     "chokidar": "^1.6.1",
     "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
     "npm-run-all": "^4.0.2",
     "react-addons-test-utils": "^15.6.2",
     "react-docgen": "^2.14.0",
