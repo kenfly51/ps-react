@@ -93,3 +93,4 @@ launch.json
 
 # Webstorm
 .idea
+config/componentData.js
